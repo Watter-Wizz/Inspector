@@ -1,0 +1,5 @@
+('C:\\Users\\320108246\\Desktop\\Inspector2\\build\\Inspector2\\pywinusb-0.4.2-py3.11.egg',
+ None,
+ {'*.pyw', '*.pyc', 'EGG-INFO', '*.cp311-win_amd64.pyd', '*.py', '*.pyd'},
+ 'DATA',
+ [])
