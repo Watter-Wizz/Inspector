@@ -1,0 +1,3 @@
+six
+pywinusb
+python-dateutil

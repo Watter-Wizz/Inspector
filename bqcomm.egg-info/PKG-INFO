@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: bqcomm
+Version: 0.0.7
+Summary: Generic communication interface for Aardvarks, EV2x00s
+Home-page: 
+Author: Michael O'Brien
+Author-email: michaelobrien@ti.com
+Requires-Dist: six
+Requires-Dist: pywinusb
+Requires-Dist: python-dateutil

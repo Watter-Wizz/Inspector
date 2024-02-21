@@ -84,7 +84,7 @@ class MainApplication(ttk.Frame):
       else:
          self.OKlabel2.config(bg="red" , text='Fail')
 
-   # Is the temperature between 10 and 40 degrees ?
+   # Is the temperature between 10 and 40 degrees ? Unit is 0.1 degree kelvin. do we need the result in celcius?
       temperature = self.bq_adapter.device.smb_read_word(BQ40Z50_ADDR, TEMP_CMD)/100
       time.sleep(0.1) 
       self.l6.config(text=str(temperature)) 
@@ -138,7 +138,7 @@ class MainApplication(ttk.Frame):
          self.OKlabel8.config(bg="red" , text='Fail')
 
 
-   # Is the Serial Number higher than 0004
+   # Is the Serial Number higher than 0004; unit HEX 
       serialnumber = self.bq_adapter.device.smb_read_word(BQ40Z50_ADDR, SN_CMD)
       time.sleep(0.1)
       self.l18.config(text=str(serialnumber))    
@@ -309,6 +309,7 @@ class MainApplication(ttk.Frame):
 if __name__ == "__main__":
     root = ttk.Tk()
     root.geometry("750x700") 
+    root.title('Battery Shutdown Tool V1.0')
     MainApplication(root).pack(side="top", fill="both", expand=True)
     root.mainloop()
     
