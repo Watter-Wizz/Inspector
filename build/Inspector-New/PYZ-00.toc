@@ -1,5 +1,6 @@
 ('C:\\Users\\320200245\\OneDrive - '
- 'Philips\\Documents\\Boblingen-Battery\\Repo\\Inspector\\build\\Inspector-New\\PYZ-00.pyz',
+ 'Philips\\Documents\\Boblingen-Battery\\Repo\\New '
+ 'folder\\Inspector\\build\\Inspector-New\\PYZ-00.pyz',
  [('__future__',
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.3568.0_x64__qbz5n2kfra8p0\\lib\\__future__.py',
@@ -42,31 +43,38 @@
    'PYMODULE'),
   ('bqcomm',
    'C:\\Users\\320200245\\OneDrive - '
-   'Philips\\Documents\\Boblingen-Battery\\Repo\\Inspector\\bqcomm\\__init__.py',
+   'Philips\\Documents\\Boblingen-Battery\\Repo\\New '
+   'folder\\Inspector\\bqcomm\\__init__.py',
    'PYMODULE'),
   ('bqcomm.aardvark',
    'C:\\Users\\320200245\\OneDrive - '
-   'Philips\\Documents\\Boblingen-Battery\\Repo\\Inspector\\bqcomm\\aardvark\\__init__.py',
+   'Philips\\Documents\\Boblingen-Battery\\Repo\\New '
+   'folder\\Inspector\\bqcomm\\aardvark\\__init__.py',
    'PYMODULE'),
   ('bqcomm.aardvark.commdevice',
    'C:\\Users\\320200245\\OneDrive - '
-   'Philips\\Documents\\Boblingen-Battery\\Repo\\Inspector\\bqcomm\\aardvark\\commdevice.py',
+   'Philips\\Documents\\Boblingen-Battery\\Repo\\New '
+   'folder\\Inspector\\bqcomm\\aardvark\\commdevice.py',
    'PYMODULE'),
   ('bqcomm.adapter',
    'C:\\Users\\320200245\\OneDrive - '
-   'Philips\\Documents\\Boblingen-Battery\\Repo\\Inspector\\bqcomm\\adapter.py',
+   'Philips\\Documents\\Boblingen-Battery\\Repo\\New '
+   'folder\\Inspector\\bqcomm\\adapter.py',
    'PYMODULE'),
   ('bqcomm.ev2400',
    'C:\\Users\\320200245\\OneDrive - '
-   'Philips\\Documents\\Boblingen-Battery\\Repo\\Inspector\\bqcomm\\ev2400\\__init__.py',
+   'Philips\\Documents\\Boblingen-Battery\\Repo\\New '
+   'folder\\Inspector\\bqcomm\\ev2400\\__init__.py',
    'PYMODULE'),
   ('bqcomm.ev2400.driver',
    'C:\\Users\\320200245\\OneDrive - '
-   'Philips\\Documents\\Boblingen-Battery\\Repo\\Inspector\\bqcomm\\ev2400\\driver.py',
+   'Philips\\Documents\\Boblingen-Battery\\Repo\\New '
+   'folder\\Inspector\\bqcomm\\ev2400\\driver.py',
    'PYMODULE'),
   ('bqcomm.ev2400.packet',
    'C:\\Users\\320200245\\OneDrive - '
-   'Philips\\Documents\\Boblingen-Battery\\Repo\\Inspector\\bqcomm\\ev2400\\packet.py',
+   'Philips\\Documents\\Boblingen-Battery\\Repo\\New '
+   'folder\\Inspector\\bqcomm\\ev2400\\packet.py',
    'PYMODULE'),
   ('bz2',
    'C:\\Program '
@@ -82,7 +90,8 @@
    'PYMODULE'),
   ('constants',
    'C:\\Users\\320200245\\OneDrive - '
-   'Philips\\Documents\\Boblingen-Battery\\Repo\\Inspector\\constants.py',
+   'Philips\\Documents\\Boblingen-Battery\\Repo\\New '
+   'folder\\Inspector\\constants.py',
    'PYMODULE'),
   ('contextlib',
    'C:\\Program '

@@ -32,7 +32,6 @@ class MainApplication(ttk.Frame):
             self.bq_adapter.open()
             time.sleep(0.1)
             self.info1.config(text="Connected", bg="green" )
-            self.CheckConnection()
          except:
             self.bq_adapter == None
             print(" Could not Establish First Connection")
@@ -40,7 +39,6 @@ class MainApplication(ttk.Frame):
          try:
             fwversion = self.bq_adapter.device.get_version()
             self.info1.config(text="Connected", bg="green" )
-            self.CheckConnection()
             # print("Connection still works")
          except:
             self.bq_adapter = None
@@ -178,6 +176,7 @@ class MainApplication(ttk.Frame):
 
       ttk.Button(frame_r, text="Start", command = self.CheckValues, font=("Calibri", 15),padx=5).grid(row=i+6,column=0,pady=30, sticky=E)
       self.CheckAdapter()
+      self.CheckConnection()
       
         
 if __name__ == "__main__":
