@@ -17,14 +17,14 @@ commands={"BQ40Z50_ADDR": 0x17,
           }
 
 device_limits = {
-         "Siena": {"Voltage [mV]": (8000, 12300), "Current [mA]": 0,"Temperature [C]": (10, 40), "Max error [%]": (0, 2), "State of charge [%]": (5, 30), "Remaining capacity [mAh]":(500, 3000),"Cycle count": (0,5),"Full charge capacity [mAh]": 5820, "Serial number": 4, "Manufacturer date": 2},
-         "EV2400": {"Voltage [mV]": (8000, 12300), "Current [mA]": 0,"Temperature [C]": (10, 40), "Max error [%]": (0, 2), "State of charge [%]": (5, 30), "Remaining capacity [mAh]":(500, 3000),"Cycle count": (0,5),"Full charge capacity [mAh]": 5820, "Serial number": 4, "Manufacturer date": 2}
+         "958231": {"Voltage [mV]": (8000, 12300), "Current [mA]": 0,"Temperature [\u2103]": (10, 40), "Max error [%]": (0, 2), "State of charge [%]": (5, 30), "Remaining capacity [mAh]":(500, 3000),"Cycle count": (0,5),"Full charge capacity [mAh]": 5820, "Serial number": 4, "Manufacturer date": 2},
+         "453564918601": {"Voltage [mV]": (8000, 12300), "Current [mA]": 0,"Temperature [\u2103]": (10, 40), "Max error [%]": (0, 2), "State of charge [%]": (5, 30), "Remaining capacity [mAh]":(500, 3000),"Cycle count": (0,5),"Full charge capacity [mAh]": 5820, "Serial number": 4, "Manufacturer date": 2}
       }
 
 checks = {
          "Voltage [mV]": { "parameter":'voltage', "cmd": commands["VOLT_CMD"],  "label": 'self.l4', "ok_label": 'self. OKlabel2'},
          "Current [mA]": { "parameter":'current', "cmd": commands["CURR_CMD"],  "label": 'self. l6', "ok_label": 'self. OKlabel3'},
-         "Temperature [C]": { "parameter":'temperature', "cmd": commands["TEMP_CMD"],  "label": 'self. l8', "ok_label": 'self. OKlabel4', "scale": 0.1, "constant":-273.15},
+         "Temperature [\u2103]": { "parameter":'temperature', "cmd": commands["TEMP_CMD"],  "label": 'self. l8', "ok_label": 'self. OKlabel4', "scale": 0.1, "constant":-273.15},
          "Max error [%]": { "parameter":'maxerror', "cmd": commands["MAXE_CMD"],  "label": 'self. l10', "ok_label": 'self. OKlabel5'},
          "State of charge [%]": { "parameter":'rsoc', "cmd": commands["RSOC_CMD"],  "label": 'self. l12', "ok_label": 'self. OKlabel6'},
          "Remaining capacity [mAh]": { "parameter":'rcap', "cmd": commands["RCAP_CMD"],  "label": 'self. l14', "ok_label": 'self. OKlabel7'},
@@ -42,4 +42,3 @@ def decode_date(encoded_date):
    decoded_date = datetime(year, month, day)
    
    return datetime.date(decoded_date)
-

@@ -1,7 +1,7 @@
 """
 # Battery Shutdown Tool 
 ##### Project:      Siena Battery
-##### File:         Inspector-New.py
+##### File:         Inspector.py
 ##### Author:       Enrique Garcia
 ##### Description: Tool to set Siena batteries into SHUTDOWN mode for shipment. 
 ##### (2023-JAN-26) REV3
@@ -32,6 +32,7 @@ class MainApplication(ttk.Frame):
             self.bq_adapter.open()
             time.sleep(0.1)
             self.info1.config(text="Connected", bg="green" )
+            
          except:
             self.bq_adapter == None
             print(" Could not Establish First Connection")
@@ -53,17 +54,11 @@ class MainApplication(ttk.Frame):
          x = self.bq_adapter.device.smb_read_word(commands["BQ40Z50_ADDR"], commands["VOLT_CMD"])
          self.info2.config(text="Connected", bg="green")
 
-         # Is the Battery Siena or Evoline
          # DeviceName's unit is ASCII
-         device_no = self.bq_adapter.device.smb_read_word(commands["BQ40Z50_ADDR"], commands["DEVICE_CMD"])
+         device_no_ascii = self.bq_adapter.device.smb_read_block(commands["BQ40Z50_ADDR"], commands["DEVICE_CMD"])
+         devicename = ''.join(map(chr, device_no_ascii))
+         self.info3.config(text=str(devicename),bg="green")
          time.sleep(0.1)
-         if device_no == 958231:
-            devicename="Siena"
-            self.info3.config(text=str(devicename),bg="green")
-            
-         elif device_no == 453564918601:
-            devicename="EV2400"
-            self.info3.config(text=str(devicename),bg="green")
                   
       except:
          self.info2.config(text="Disconnected", bg="red")
@@ -72,20 +67,18 @@ class MainApplication(ttk.Frame):
          for parameter, info in checks.items():
             info["label"].config(text=str(0))
             info["ok_label"].config(bg="gray", text="Check")
+      
+      self.after(1000, self.CheckConnection)
+
 
    def CheckValues(self):
       # Define the limits for each device
       status_list=[]
       
       # Read the device name
-      device_no = self.bq_adapter.device.smb_read_word(commands["BQ40Z50_ADDR"], commands["DEVICE_CMD"])
-      time.sleep(0.1)
-      if device_no == 958231:
-         devicename="Siena"
+      device_no_ascii = self.bq_adapter.device.smb_read_block(commands["BQ40Z50_ADDR"], commands["DEVICE_CMD"])
+      devicename = ''.join(map(chr, device_no_ascii))
          
-      elif device_no == 453564918601:
-         devicename="EV2400"
-   
       # Check if the device name is recognized
       if devicename in device_limits:
         # Perform the checks
@@ -95,6 +88,7 @@ class MainApplication(ttk.Frame):
             time.sleep(0.1)
             if "scale" and "constant" in info:
                value = value*info["scale"] + info["constant"]
+               value=round(value,2)
                      
             if "greater_than" in info:
                limit = device_limits[devicename][parameter]
@@ -181,7 +175,7 @@ class MainApplication(ttk.Frame):
         
 if __name__ == "__main__":
    root = ttk.Tk()
-   root.title('Battery Shutdown Tool V3.0')
+   root.title('Battery Shutdown Tool V2.0')
    MainApplication(root).pack(side="top", fill="both", expand=True)
    root.mainloop()
    

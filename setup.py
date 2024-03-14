@@ -41,7 +41,7 @@ setup(
     author_email="michaelobrien@ti.com",
     install_requires=[
         "six",
-        # "aardvark_py",  # doesn't work with python 3.7 yet, so optional, works with python 2.X
+        # "aardvark_py",  # doesn't work with python 3.7 yet, so optional
         "pywinusb",  # TODO: Other OSes
         "python-dateutil",
     ],
